@@ -27,7 +27,8 @@ if (num1 === num2 && num2 === num3) {
     console.log("Menor a Mayor: " + menor + ", " + centro + ", " + mayor);
 }
 
-document.body.innerHTML = `
+document.body.innerHTML = 
+`
     <h1>Resultados</h1>
     <p>Los números introducidos fueron: ${num1}, ${num2}, ${num3}</p>
     ${num1 === num2 && num2 === num3 ? 
