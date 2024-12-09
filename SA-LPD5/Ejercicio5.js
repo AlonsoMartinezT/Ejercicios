@@ -7,3 +7,30 @@ El número secreto puede ser introducido manualmente o generar un número aleato
 Debe ser capaz de identificar si el dato de entrada es de tipo number, en caso contrario debe mandar un mensaje de error y volver a solicitar el dato.
 */
 
+const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+console.log(numeroSecreto);
+let intentos = [];
+
+function adivinarNumero() {
+let numeroIngresado;
+    while (true) {
+        numeroIngresado = prompt("Adivina el número secreto entre 1 y 100:");
+        numeroIngresado = Number(numeroIngresado);
+    if (isNaN(numeroIngresado)) {
+        alert("Por favor, ingresa un número válido.");
+    continue;
+    }
+    intentos.push(numeroIngresado);
+    
+    if (numeroIngresado === numeroSecreto) {
+        alert("¡Felicidades, adivinaste el número secreto!");
+        console.log(`El numero secreto es: ${numeroSecreto}`)
+        console.log("Lista de intentos: ", intentos);
+    break;
+    } else {
+    alert("Ups, el número secreto es incorrecto, vuelve a intentarlo.");
+    }
+    }
+}
+
+adivinarNumero();
